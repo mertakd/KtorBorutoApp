@@ -10,7 +10,7 @@ class HeroRepositoryImpl : HeroRepository {
 
     override val heroes: Map<Int, List<Hero>> by lazy {
         mapOf(
-            1 to page1,
+            1 to page1,  //aşağıdaki listeleri getiriyor sayılar onları temsil ediyor
             2 to page2,
             3 to page3,
             4 to page4,

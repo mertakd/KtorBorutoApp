@@ -14,8 +14,8 @@ fun Route.getAllHeroes() {
 
     get("/boruto/heroes") {
         try {
-            val page = call.request.queryParameters["page"]?.toInt() ?: 1
-            println("NEW PAGE: $page")
+            val page = call.request.queryParameters["page"]?.toInt() ?: 1 //veri gitmezse önyüze varsayılan sayfa bir olacak
+            println("NEW PAGE: $page")              //page parametresi android tarafında yani client tarafında kullanılacak verilerimizi pagination yaparken
             require(page in 1..5)
 
             val apiResponse = heroRepository.getAllHeroes(page = page)
@@ -23,7 +23,7 @@ fun Route.getAllHeroes() {
                 message = apiResponse,
                 status = HttpStatusCode.OK
             )
-        } catch (e: NumberFormatException) {
+        } catch (e: NumberFormatException) { //client sayı yerine text yazarsa hata fırlatsın diye catch yapıyoruz
             call.respond(
                 message = ApiResponse(success = false, message = "Only Numbers Allowed."),
                 status = HttpStatusCode.BadRequest

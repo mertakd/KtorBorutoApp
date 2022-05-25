@@ -12,5 +12,6 @@ val koinModule = module {
 
     /*
     -singleton oluşturuyoruz
+    -HerorepositoryImp sınıfının instance sini oluşturuyoruz.bu instance ın singleton olmalı
      */
 }
