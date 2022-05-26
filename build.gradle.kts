@@ -28,6 +28,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
+    implementation("org.testng:testng:7.1.0")
 
     testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
