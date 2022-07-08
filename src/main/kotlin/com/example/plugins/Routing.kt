@@ -11,10 +11,6 @@ fun Application.configureRouting() {
         getAllHeroes()
         searchHeroes()
 
-
-        getAllCities()
-        searchCities()
-
         static("/images") {
             resources("images")
         }
